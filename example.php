@@ -1,9 +1,9 @@
 <html>
 <head>
-  <title>Zip Code Range and Distance Calculation Class for PHP 5</title>
+  <title>Postal (Zip) Code Range and Distance Calculation Class for PHP 5</title>
 </head>
 <body>
-<h1>Zip Code Range and Distance Calculation Class for PHP 5</h1>
+<h1>Postal (Zip) Code Range and Distance Calculation Class for PHP 5</h1>
 <p>
     This is the example (example.php) shows how to calculate the distance between
     U.S. zip codes and find all zip codes within a distance from a known zip
@@ -11,16 +11,16 @@
 </p>
 <h3>More Information</h3>
 <ul>
-    <li><a 
+    <li><a
     href="https://github.com/Quixotix/PHP-ZipCode-Class">PHP-ZipCode-Class</a>
     source code and downloads on Github.</li>
     <li>My blog post: <a
     href="http://www.micahcarrick.com/php5-zip-code-range-and-distance.html">PHP 5
-    Zip Code Range and Distance Calculation</a>.</li>
+    Postal Code Range and Distance Calculation</a>.</li>
 </ul>
 <?php
 
-include('zipcode.php');
+include('PostalCode.php');
 
 // connect to the MySQL database with the zip code table
 
@@ -30,12 +30,12 @@ mysql_select_db('YOUR DB NAME');
 
 // you can instantiate ZipCode with a zip code or with city and state
 
-$portland = new ZipCode("97214");
-$ventura = new ZipCode("Ventura, CA");
+$portland = new PostalCode("97214");
+$ventura = new PostalCode("Ventura, CA");
 
 
 /*
-You can get the distance to another location by specifying a zip code, 
+You can get the distance to another location by specifying a zip code,
 city/state string, or another ZipCode object. You can specify whether you want
 to get the distance in miles or kilometers.
 */
@@ -43,7 +43,7 @@ to get the distance in miles or kilometers.
 echo "<h2>Get the distance between 2 zip codes</h2>";
 
 $distance1 = round($portland->getDistanceTo("98501"), 2);
-$distance2 = round($portland->getDistanceTo($ventura, ZipCode::UNIT_KILOMETERS), 2);
+$distance2 = round($portland->getDistanceTo($ventura, PostalCode::UNIT_KILOMETERS), 2);
 $distance3 = round($portland->getDistanceTo("Salem, OR"), 2);
 
 echo "Zip code <strong>$portland</strong> is <strong>$distance1</strong> miles away from "
@@ -63,8 +63,8 @@ distance as the array's key and the array element is another ZipCode object.
 */
 echo "<h2>Get all zip codes between 10 and 15 miles from 97214</h2>";
 
-foreach ($portland->getZipsInRange(10, 15) as $miles => $zip) {
-    
+foreach ($portland->getPostalCodesInRange(10, 15) as $miles => $zip) {
+
     $miles = round($miles, 1);
     echo "Zip code <strong>$zip</strong> is <strong>$miles</strong> miles away from "
         ." <strong>$portland</strong> ({$zip->getCounty()} county)<br/>";
