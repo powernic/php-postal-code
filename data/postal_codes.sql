@@ -27,7 +27,7 @@ CREATE TABLE `postal_codes` (
   `accuracy` tinyint(1) NOT NULL COMMENT 'accuracy of lat/lng from 1=estimated to 6=centroid',
   KEY `postal_code` (`postal_code`),
   KEY `place_name` (`place_name`,`admin_code1`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Download and import the file `US.zip` from <http://download.geonames.org/export/zip/>\nThe GeoNames.org database is licensed under a Creative Commons Attribution 3.0 License.';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Download and import the file `US.zip` from <http://download.geonames.org/export/zip/>\nThe GeoNames.org database is licensed under a Creative Commons Attribution 3.0 License.';
 
 
 
