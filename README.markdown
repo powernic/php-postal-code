@@ -49,7 +49,7 @@ After installing Composer into your project, the PHP PostalCode Class can be ins
 ```json
 {
   "require": {
-    "rubberneck/php-postal-code": "dev-master"
+    "rubberneck/php-postal-code": "2.*"
   }
 }
 ```
