@@ -40,6 +40,20 @@ The class has been modified to work with the [GeoNames.org postal code database]
 is licensed under a Creative Commons Attribution 3.0 License. This database can be
 downloaded and imported into a MySQL database using the included schema.
 
+### Composer
+
+[Composer](http://getcomposer.org/) is an easy way to manage dependencies in your PHP projects. The PHP PostalCode Class can be found in the default [Packagist](http://packagist.org/) repository.
+
+After installing Composer into your project, the PHP PostalCode Class can be installed by adding the following lines to your `composer.json` file and running the Composer command line tool:
+
+```json
+{
+  "require": {
+    "rubberneck/php-postal-code": "dev-master"
+  }
+}
+```
+
 License
 -------
 
