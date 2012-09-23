@@ -1,7 +1,7 @@
 {
     "name": "rubberneck/php-postal-code",
     "description": "Calculate the distance between U.S. zip codes and find all zip codes within a given distance of a known zip code.",
-    "version": "2.0",
+    "version": "2.0.1",
     "keywords": ["postalcode", "zipcode"],
     "homepage": "https://github.com/jaywilliams/PHP-ZipCode-Class",
     "license": "GPL-3.0",
